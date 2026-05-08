@@ -1,0 +1,16 @@
+[    2453ms] [ERROR] [JavaScript Error: "Firefox can’t establish a connection to the server at ws://localhost:5000/?token=iOittvUhCS4D." {file: "http://localhost:5000/@vite/client" line: 536}] @ http://localhost:5000/@vite/client:536
+[    2460ms] SyntaxError: An invalid or illegal string was specified
+    at setupWebSocket (http://localhost:5000/@vite/client:536:19)
+    at fallback (http://localhost:5000/@vite/client:509:16)
+    at setupWebSocket/< (http://localhost:5000/@vite/client:555:7)
+    at EventListener.handleEvent*setupWebSocket (http://localhost:5000/@vite/client:552:11)
+    at  (http://localhost:5000/@vite/client:531:12)
+[    2907ms] [INFO] Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools @ http://localhost:5000/@fs/C:/Users/mudau/Pictures/ProfessionalTutoring/node_modules/.vite/deps/chunk-RPCDYKBN.js?v=ecb25c74:21550
+[    9747ms] [ERROR] [JavaScript Error: "Firefox can’t establish a connection to the server at ws://localhost:5000/?token=iOittvUhCS4D." {file: "http://localhost:5000/@vite/client" line: 536}] @ http://localhost:5000/@vite/client:536
+[    9749ms] SyntaxError: An invalid or illegal string was specified
+    at setupWebSocket (http://localhost:5000/@vite/client:536:19)
+    at fallback (http://localhost:5000/@vite/client:509:16)
+    at setupWebSocket/< (http://localhost:5000/@vite/client:555:7)
+    at EventListener.handleEvent*setupWebSocket (http://localhost:5000/@vite/client:552:11)
+    at  (http://localhost:5000/@vite/client:531:12)
+[   10044ms] [INFO] Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools @ http://localhost:5000/@fs/C:/Users/mudau/Pictures/ProfessionalTutoring/node_modules/.vite/deps/chunk-RPCDYKBN.js?v=ecb25c74:21550

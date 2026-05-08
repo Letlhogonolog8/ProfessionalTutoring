@@ -1,0 +1,71 @@
+
+DOMException {}
+stack: "SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=32V86QfMM3x5' is invalid.↵ at new t (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:218737)↵ at setupWebSocket (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/@vite/client:536:19)↵ at fallback (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/@vite/client:509:16)↵ at WebSocket.<anonymous> (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/@vite/client:555:7)"
+get stack: ƒ ()
+set stack: ƒ ()
+length: 1
+name: ""
+[[Prototype]]: ƒ ()
+[[Prototype]]: DOMException
+ABORT_ERR: 20
+DATA_CLONE_ERR: 25
+DOMSTRING_SIZE_ERR: 2
+HIERARCHY_REQUEST_ERR: 3
+INDEX_SIZE_ERR: 1
+INUSE_ATTRIBUTE_ERR: 10
+INVALID_ACCESS_ERR: 15
+INVALID_CHARACTER_ERR: 5
+INVALID_MODIFICATION_ERR: 13
+INVALID_NODE_TYPE_ERR: 24
+INVALID_STATE_ERR: 11
+NAMESPACE_ERR: 14
+NETWORK_ERR: 19
+NOT_FOUND_ERR: 8
+NOT_SUPPORTED_ERR: 9
+NO_DATA_ALLOWED_ERR: 6
+NO_MODIFICATION_ALLOWED_ERR: 7
+QUOTA_EXCEEDED_ERR: 22
+SECURITY_ERR: 18
+SYNTAX_ERR: 12
+TIMEOUT_ERR: 23
+TYPE_MISMATCH_ERR: 17
+URL_MISMATCH_ERR: 21
+VALIDATION_ERR: 16
+WRONG_DOCUMENT_ERR: 4
+code: 12
+get code: ƒ get code()
+message: "Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=32V86QfMM3x5' is invalid."
+get message: ƒ get message()
+name: "SyntaxError"
+get name: ƒ get name()
+constructor: ƒ DOMException()
+Symbol(Symbol.toStringTag): undefined
+[[Prototype]]: Object
+constructor: ƒ DOMException()
+message: "Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=32V86QfMM3x5' is invalid."
+name: "SyntaxError"
+toString: ƒ toString()
+[[Prototype]]: Object
+
+at t.value (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:17465)
+at new t (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:12630)
+at t.value (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:32766)
+at https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:34400
+Warning: validateDOMNesting(...): <a> cannot appear as a descendant of &lt;a&gt;.
+    at a
+    at a
+    at https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=267efdb5:337:18
+    at div
+    at div
+    at div
+    at nav
+    at Navbar (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/src/components/layout/navbar.tsx:27:51)
+    at div
+    at PageLayout (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/src/components/layout/page-layout.tsx:19:30)
+    at HomePage
+    at Route (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=267efdb5:323:16)
+    at Switch (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=267efdb5:379:17)
+    at Router
+    at AuthProvider (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/src/hooks/use-auth.tsx:27:32)
+    at QueryClientProvider (https://3054b69e-fa98-4911-97b7-fbddafacb978-00-rqphy09h48qa.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=8397f330:2805:3)
+    at App

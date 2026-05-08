@@ -1,0 +1,56 @@
+ 
+ POST https://26b3cb57-b26d-48c7-a72b-522c4ab88db4-00-zh0346ewazq2.kirk.replit.dev/api/login 401 (Unauthorized)
+apiRequest	@	src/lib/queryClient.ts:9
+mutationFn	@	src/hooks/use-auth.tsx:41
+fn	@	@fs/home/runner/work….js?v=2502d859:1194
+run	@	@fs/home/runner/work…y.js?v=2502d859:494
+start	@	@fs/home/runner/work…y.js?v=2502d859:536
+execute	@	@fs/home/runner/work….js?v=2502d859:1230
+await in execute		
+mutate	@	@fs/home/runner/work….js?v=2502d859:2652
+(anonymous)	@	@fs/home/runner/work….js?v=2502d859:3374
+onClick	@	auth-page.tsx:183
+callCallback2	@	@fs/home/runner/work….js?v=2502d859:3674
+invokeGuardedCallbackDev	@	@fs/home/runner/work….js?v=2502d859:3699
+invokeGuardedCallback	@	@fs/home/runner/work….js?v=2502d859:3733
+invokeGuardedCallbackAndCatchFirstError	@	@fs/home/runner/work….js?v=2502d859:3736
+executeDispatch	@	@fs/home/runner/work….js?v=2502d859:7014
+processDispatchQueueItemsInOrder	@	@fs/home/runner/work….js?v=2502d859:7034
+processDispatchQueue	@	@fs/home/runner/work….js?v=2502d859:7043
+dispatchEventsForPlugins	@	@fs/home/runner/work….js?v=2502d859:7051
+(anonymous)	@	@fs/home/runner/work….js?v=2502d859:7174
+batchedUpdates$1	@	@fs/home/runner/work…js?v=2502d859:18913
+batchedUpdates	@	@fs/home/runner/work….js?v=2502d859:3579
+dispatchEventForPluginEventSystem	@	@fs/home/runner/work….js?v=2502d859:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay	@	@fs/home/runner/work….js?v=2502d859:5478
+dispatchEvent	@	@fs/home/runner/work….js?v=2502d859:5472
+dispatchDiscreteEvent	@	@fs/home/runner/work….js?v=2502d859:5449
+
+ Login error: Error: 401: {"message":"Invalid credentials"}
+    at throwIfResNotOk (src/lib/queryClient.ts:5:11)
+    at async apiRequest (src/lib/queryClient.ts:15:3)
+    at async Object.mutationFn (src/hooks/use-auth.tsx:41:19)
+onError	@	src/hooks/use-auth.tsx:65
+execute	@	@fs/home/runner/work….js?v=2502d859:1259
+await in execute		
+mutate	@	@fs/home/runner/work….js?v=2502d859:2652
+(anonymous)	@	@fs/home/runner/work….js?v=2502d859:3374
+onClick	@	auth-page.tsx:183
+callCallback2	@	@fs/home/runner/work….js?v=2502d859:3674
+invokeGuardedCallbackDev	@	@fs/home/runner/work….js?v=2502d859:3699
+invokeGuardedCallback	@	@fs/home/runner/work….js?v=2502d859:3733
+invokeGuardedCallbackAndCatchFirstError	@	@fs/home/runner/work….js?v=2502d859:3736
+executeDispatch	@	@fs/home/runner/work….js?v=2502d859:7014
+processDispatchQueueItemsInOrder	@	@fs/home/runner/work….js?v=2502d859:7034
+processDispatchQueue	@	@fs/home/runner/work….js?v=2502d859:7043
+dispatchEventsForPlugins	@	@fs/home/runner/work….js?v=2502d859:7051
+(anonymous)	@	@fs/home/runner/work….js?v=2502d859:7174
+batchedUpdates$1	@	@fs/home/runner/work…js?v=2502d859:18913
+batchedUpdates	@	@fs/home/runner/work….js?v=2502d859:3579
+dispatchEventForPluginEventSystem	@	@fs/home/runner/work….js?v=2502d859:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay	@	@fs/home/runner/work….js?v=2502d859:5478
+dispatchEvent	@	@fs/home/runner/work….js?v=2502d859:5472
+dispatchDiscreteEvent	@	@fs/home/runner/work….js?v=2502d859:5449
+
+﻿
+

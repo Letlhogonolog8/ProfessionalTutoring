@@ -1,0 +1,36 @@
+Uncaught (in promise) SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=0wgfAof3kUK4' is invalid.
+    at setupWebSocket (client:536:19)
+    at fallback (client:509:16)
+    at WebSocket.<anonymous> (client:555:7)Understand this error
+2App.tsx:86 Uncaught ReferenceError: AdminSchedule is not defined
+    at Router (App.tsx:86:59)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2502d859:11548:26)
+    at mountIndeterminateComponent (chunk-RPCDYKBN.js?v=2502d859:14926:21)
+    at beginWork (chunk-RPCDYKBN.js?v=2502d859:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2502d859:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2502d859:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2502d859:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2502d859:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=2502d859:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=2502d859:19137:13)Understand this error
+hook.js:608 The above error occurred in the <Router> component:
+
+    at Router (https://26b3cb57-b26d-48c7-a72b-522c4ab88db4-00-zh0346ewazq2.kirk.replit.dev:8000/src/App.tsx?v=0NnklbHEoAcLpTLSpUqGp:184:324)
+    at AuthProvider (https://26b3cb57-b26d-48c7-a72b-522c4ab88db4-00-zh0346ewazq2.kirk.replit.dev:8000/src/hooks/use-auth.tsx:27:32)
+    at QueryClientProvider (https://26b3cb57-b26d-48c7-a72b-522c4ab88db4-00-zh0346ewazq2.kirk.replit.dev:8000/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=2502d859:2872:3)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+overrideMethod @ hook.js:608Understand this error
+chunk-RPCDYKBN.js?v=2502d859:19413 Uncaught ReferenceError: AdminSchedule is not defined
+    at Router (App.tsx:86:59)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2502d859:11548:26)
+    at mountIndeterminateComponent (chunk-RPCDYKBN.js?v=2502d859:14926:21)
+    at beginWork (chunk-RPCDYKBN.js?v=2502d859:15914:22)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2502d859:19753:22)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=2502d859:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=2502d859:19137:13)
+    at renderRootSync (chunk-RPCDYKBN.js?v=2502d859:19116:15)
+    at recoverFromConcurrentError (chunk-RPCDYKBN.js?v=2502d859:18736:28)
+    at performConcurrentWorkOnRoot (chunk-RPCDYKBN.js?v=2502d859:18684:30)Understand this error

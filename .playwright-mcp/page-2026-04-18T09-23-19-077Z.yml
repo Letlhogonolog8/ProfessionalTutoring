@@ -1,0 +1,401 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "Kindleah Investment Logo" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - img "Kindleah Investment Logo" [ref=e12]
+        - generic [ref=e13]:
+          - link "Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+          - link "About" [ref=e15] [cursor=pointer]:
+            - /url: /about
+          - link "Services" [ref=e16] [cursor=pointer]:
+            - /url: /services
+          - link "Contact" [ref=e17] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e18]:
+          - button "Switch to dark theme" [ref=e19] [cursor=pointer]:
+            - generic [ref=e20]:
+              - img
+          - link "Login" [ref=e21] [cursor=pointer]:
+            - /url: /auth
+          - link "Sign Up" [ref=e22] [cursor=pointer]:
+            - /url: /auth
+    - main [ref=e23]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - heading "Expert Research Methodology & Academic Tutoring" [level=1] [ref=e27]:
+            - text: Expert Research
+            - text: Methodology & Academic Tutoring
+          - paragraph [ref=e28]: Elevate your academic and research journey with KindLeah Investment's personalized tutoring services. Our expert methodology ensures your success in any academic endeavor.
+          - generic [ref=e29]:
+            - link "Explore Our Services" [ref=e30] [cursor=pointer]:
+              - /url: "#services"
+            - link "Contact Us" [ref=e31] [cursor=pointer]:
+              - /url: /contact
+        - img "Samuel Silabele - Lead Tutor" [ref=e34]
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - heading "Why Choose Our Tutoring Services" [level=2] [ref=e38]
+          - paragraph [ref=e39]: Experience the difference with our personalized approach to academic success
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - img [ref=e43]
+            - heading "Expert Tutors" [level=3] [ref=e45]
+            - paragraph [ref=e46]: Learn from qualified tutors with extensive experience in research methodology and academic writing.
+          - generic [ref=e47]:
+            - img [ref=e49]
+            - heading "Interactive Sessions" [level=3] [ref=e51]
+            - paragraph [ref=e52]: Engage in real-time video calls, live chat, and collaborative document editing with your tutor.
+          - generic [ref=e53]:
+            - img [ref=e55]
+            - heading "Flexible Scheduling" [level=3] [ref=e57]
+            - paragraph [ref=e58]: Book sessions at your convenience with our user-friendly scheduling system that updates in real-time.
+          - generic [ref=e59]:
+            - img [ref=e61]
+            - heading "Document Management" [level=3] [ref=e63]
+            - paragraph [ref=e64]: Seamlessly share files, receive feedback, and collaborate on research papers and academic assignments.
+          - generic [ref=e65]:
+            - img [ref=e67]
+            - heading "Instant Communication" [level=3] [ref=e69]
+            - paragraph [ref=e70]: Stay connected with SMS notifications and instant messaging for quick questions and updates.
+          - generic [ref=e71]:
+            - img [ref=e73]
+            - heading "Progress Tracking" [level=3] [ref=e75]
+            - paragraph [ref=e76]: Monitor your academic growth with detailed progress reports and milestone achievements.
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - heading "Meet Our Expert Tutor" [level=2] [ref=e79]
+          - paragraph [ref=e80]: Learn from the best in academic research methodology
+        - generic [ref=e83]:
+          - img "Samuel Silabele" [ref=e85]
+          - generic [ref=e86]:
+            - generic [ref=e87]:
+              - heading "Samuel Silabele" [level=3] [ref=e88]
+              - generic [ref=e89]: Lead Tutor
+            - paragraph [ref=e90]: Samuel is a highly respected academic with extensive experience in research methodology. His expertise spans quantitative, qualitative, and mixed methods research approaches. Students appreciate his patient teaching style and ability to explain complex concepts in accessible ways.
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - img [ref=e93]
+                - generic [ref=e95]: PhD in Research Methodology
+              - generic [ref=e96]:
+                - img [ref=e97]
+                - generic [ref=e99]: 10+ years of tutoring experience
+              - generic [ref=e100]:
+                - img [ref=e101]
+                - generic [ref=e103]: Published researcher with multiple academic papers
+              - generic [ref=e104]:
+                - img [ref=e105]
+                - generic [ref=e107]: "Contact: 0734801665"
+            - link "Book a Session" [ref=e109] [cursor=pointer]:
+              - /url: /student/book-session
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - heading "Our Services" [level=2] [ref=e113]
+          - paragraph [ref=e114]: Comprehensive support for all your academic and research needs
+        - generic [ref=e115]:
+          - generic [ref=e117]:
+            - img [ref=e119]
+            - heading "Thesis Development" [level=3] [ref=e125]
+            - list [ref=e126]:
+              - listitem [ref=e127]:
+                - img [ref=e128]
+                - generic [ref=e130]: Proposal writing assistance
+              - listitem [ref=e131]:
+                - img [ref=e132]
+                - generic [ref=e134]: Literature review guidance
+              - listitem [ref=e135]:
+                - img [ref=e136]
+                - generic [ref=e138]: Methodology development
+              - listitem [ref=e139]:
+                - img [ref=e140]
+                - generic [ref=e142]: Data collection planning
+              - listitem [ref=e143]:
+                - img [ref=e144]
+                - generic [ref=e146]: Analysis and interpretation
+          - generic [ref=e148]:
+            - img [ref=e150]
+            - heading "Research Methods" [level=3] [ref=e154]
+            - list [ref=e155]:
+              - listitem [ref=e156]:
+                - img [ref=e157]
+                - generic [ref=e159]: Quantitative research techniques
+              - listitem [ref=e160]:
+                - img [ref=e161]
+                - generic [ref=e163]: Qualitative analysis methods
+              - listitem [ref=e164]:
+                - img [ref=e165]
+                - generic [ref=e167]: Mixed methods approach
+              - listitem [ref=e168]:
+                - img [ref=e169]
+                - generic [ref=e171]: Statistical software training
+              - listitem [ref=e172]:
+                - img [ref=e173]
+                - generic [ref=e175]: Research design consultation
+          - generic [ref=e177]:
+            - img [ref=e179]
+            - heading "Technical Writing" [level=3] [ref=e182]
+            - list [ref=e183]:
+              - listitem [ref=e184]:
+                - img [ref=e185]
+                - generic [ref=e187]: Language editing services
+              - listitem [ref=e188]:
+                - img [ref=e189]
+                - generic [ref=e191]: Proofreading and revision
+              - listitem [ref=e192]:
+                - img [ref=e193]
+                - generic [ref=e195]: Citation and referencing
+              - listitem [ref=e196]:
+                - img [ref=e197]
+                - generic [ref=e199]: APA, MLA, Harvard formatting
+              - listitem [ref=e200]:
+                - img [ref=e201]
+                - generic [ref=e203]: Document structuring guidance
+          - generic [ref=e205]:
+            - img [ref=e207]
+            - heading "Live Tutoring" [level=3] [ref=e210]
+            - list [ref=e211]:
+              - listitem [ref=e212]:
+                - img [ref=e213]
+                - generic [ref=e215]: One-on-one video sessions
+              - listitem [ref=e216]:
+                - img [ref=e217]
+                - generic [ref=e219]: Real-time document collaboration
+              - listitem [ref=e220]:
+                - img [ref=e221]
+                - generic [ref=e223]: Interactive learning materials
+              - listitem [ref=e224]:
+                - img [ref=e225]
+                - generic [ref=e227]: Flexible scheduling options
+              - listitem [ref=e228]:
+                - img [ref=e229]
+                - generic [ref=e231]: Session recording for review
+          - generic [ref=e233]:
+            - img [ref=e235]
+            - heading "Data Analysis" [level=3] [ref=e238]
+            - list [ref=e239]:
+              - listitem [ref=e240]:
+                - img [ref=e241]
+                - generic [ref=e243]: Statistical analysis (SPSS, R)
+              - listitem [ref=e244]:
+                - img [ref=e245]
+                - generic [ref=e247]: Qualitative coding (NVivo)
+              - listitem [ref=e248]:
+                - img [ref=e249]
+                - generic [ref=e251]: Data visualization techniques
+              - listitem [ref=e252]:
+                - img [ref=e253]
+                - generic [ref=e255]: Results interpretation
+              - listitem [ref=e256]:
+                - img [ref=e257]
+                - generic [ref=e259]: Findings presentation
+          - generic [ref=e261]:
+            - img [ref=e263]
+            - heading "Group Workshops" [level=3] [ref=e268]
+            - list [ref=e269]:
+              - listitem [ref=e270]:
+                - img [ref=e271]
+                - generic [ref=e273]: Research methodology classes
+              - listitem [ref=e274]:
+                - img [ref=e275]
+                - generic [ref=e277]: Academic writing workshops
+              - listitem [ref=e278]:
+                - img [ref=e279]
+                - generic [ref=e281]: Software training sessions
+              - listitem [ref=e282]:
+                - img [ref=e283]
+                - generic [ref=e285]: Collaborative learning activities
+              - listitem [ref=e286]:
+                - img [ref=e287]
+                - generic [ref=e289]: Peer review opportunities
+      - generic [ref=e290]:
+        - generic [ref=e291]:
+          - heading "What Our Students Say" [level=2] [ref=e292]
+          - paragraph [ref=e293]: Hear from students who have transformed their academic journey with our tutoring services
+        - generic [ref=e294]:
+          - generic [ref=e295]:
+            - generic [ref=e296]:
+              - generic [ref=e298]: MK
+              - generic [ref=e299]:
+                - heading "Michael K." [level=4] [ref=e300]
+                - paragraph [ref=e301]: PhD Student
+            - generic [ref=e302]:
+              - img [ref=e303]
+              - img [ref=e305]
+              - img [ref=e307]
+              - img [ref=e309]
+              - img [ref=e311]
+            - paragraph [ref=e313]: "\"Samuel's guidance on my research methodology completely transformed my thesis. His expert knowledge and patient explanation of complex statistical concepts made all the difference.\""
+          - generic [ref=e314]:
+            - generic [ref=e315]:
+              - generic [ref=e317]: SJ
+              - generic [ref=e318]:
+                - heading "Sarah J." [level=4] [ref=e319]
+                - paragraph [ref=e320]: Master's Student
+            - generic [ref=e321]:
+              - img [ref=e322]
+              - img [ref=e324]
+              - img [ref=e326]
+              - img [ref=e328]
+              - img [ref=e330]
+            - paragraph [ref=e332]: "\"The live tutoring sessions were incredibly helpful. Being able to share my screen and get real-time feedback on my data analysis made learning so much more effective than traditional methods.\""
+          - generic [ref=e333]:
+            - generic [ref=e334]:
+              - generic [ref=e336]: DR
+              - generic [ref=e337]:
+                - heading "David R." [level=4] [ref=e338]
+                - paragraph [ref=e339]: Undergraduate
+            - generic [ref=e340]:
+              - img [ref=e341]
+              - img [ref=e343]
+              - img [ref=e345]
+              - img [ref=e347]
+              - img [ref=e349]
+            - paragraph [ref=e351]: "\"The technical writing assistance I received improved my grades dramatically. I learned so much about proper academic writing that I'll use throughout my entire academic career.\""
+      - generic [ref=e353]:
+        - heading "Ready to Transform Your Academic Journey?" [level=2] [ref=e354]
+        - paragraph [ref=e355]: Sign up now to book your first session with our expert tutor, Samuel Silabele, and take the first step toward academic excellence.
+        - generic [ref=e356]:
+          - link "Sign Up Now" [ref=e357] [cursor=pointer]:
+            - /url: /auth
+          - link "Learn More" [ref=e358] [cursor=pointer]:
+            - /url: /services
+      - generic [ref=e359]:
+        - generic [ref=e360]:
+          - heading "Get in Touch" [level=2] [ref=e361]
+          - paragraph [ref=e362]: Have questions? We're here to help you on your academic journey
+        - generic [ref=e363]:
+          - generic [ref=e364]:
+            - heading "Send Us a Message" [level=3] [ref=e365]
+            - generic [ref=e367]:
+              - generic [ref=e368]:
+                - generic [ref=e369]: Full Name
+                - textbox "Full Name" [ref=e370]
+              - generic [ref=e371]:
+                - generic [ref=e372]: Email Address
+                - textbox "Email Address" [ref=e373]
+              - generic [ref=e374]:
+                - generic [ref=e375]: Subject
+                - textbox "Subject" [ref=e376]
+              - generic [ref=e377]:
+                - generic [ref=e378]: Message
+                - textbox "Message" [ref=e379]
+              - button "Send Message" [ref=e380] [cursor=pointer]
+          - generic [ref=e381]:
+            - generic [ref=e382]:
+              - heading "Contact Information" [level=3] [ref=e383]
+              - generic [ref=e384]:
+                - generic [ref=e385]:
+                  - img [ref=e387]
+                  - generic [ref=e389]:
+                    - heading "Phone" [level=4] [ref=e390]
+                    - paragraph [ref=e391]: "Call or WhatsApp: 0734801665 / 0652 519 6587"
+                - generic [ref=e392]:
+                  - img [ref=e394]
+                  - generic [ref=e396]:
+                    - heading "Email" [level=4] [ref=e397]
+                    - paragraph [ref=e398]: info@kindleahinvestment.com
+                - generic [ref=e399]:
+                  - img [ref=e401]
+                  - generic [ref=e403]:
+                    - heading "Website" [level=4] [ref=e404]
+                    - paragraph [ref=e405]: www.kindleahinvestment.com
+            - generic [ref=e406]:
+              - heading "Follow Us" [level=3] [ref=e407]
+              - generic [ref=e408]:
+                - link [ref=e409] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e410]
+                - link [ref=e412] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e413]
+                - link [ref=e415] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e416]
+                - link [ref=e418] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e419]
+          - generic [ref=e421]:
+            - heading "Access on Mobile" [level=3] [ref=e422]
+            - generic [ref=e425]:
+              - generic [ref=e427]:
+                - heading "Access on Mobile Device" [level=3] [ref=e428]:
+                  - img [ref=e429]
+                  - text: Access on Mobile Device
+                - paragraph [ref=e432]: Scan the QR code or use the link to open the app on your mobile device
+              - generic [ref=e433]:
+                - generic [ref=e434]:
+                  - tablist [ref=e435]:
+                    - tab "QR Code" [selected] [ref=e436] [cursor=pointer]:
+                      - generic [ref=e438]: QR Code
+                    - tab "Direct Link" [ref=e439] [cursor=pointer]:
+                      - generic [ref=e441]: Direct Link
+                  - tabpanel "QR Code" [ref=e442]:
+                    - img [ref=e445]
+                - paragraph [ref=e448]: For the best experience, we recommend using the latest version of Chrome, Safari, or Firefox.
+    - contentinfo [ref=e449]:
+      - generic [ref=e450]:
+        - generic [ref=e451]:
+          - generic [ref=e452]:
+            - img "Kindleah Investment Logo" [ref=e456]
+            - paragraph [ref=e457]: Providing expert academic tutoring and research methodology services since 2020.
+          - generic [ref=e458]:
+            - heading "Navigation" [level=3] [ref=e459]
+            - list [ref=e460]:
+              - listitem [ref=e461]:
+                - link "Home" [ref=e462] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e463]:
+                - link "About" [ref=e464] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e465]:
+                - link "Services" [ref=e466] [cursor=pointer]:
+                  - /url: /services
+              - listitem [ref=e467]:
+                - link "Contact" [ref=e468] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e469]:
+            - heading "Services" [level=3] [ref=e470]
+            - list [ref=e471]:
+              - listitem [ref=e472]:
+                - link "Thesis Development" [ref=e473] [cursor=pointer]:
+                  - /url: /services#thesis
+              - listitem [ref=e474]:
+                - link "Research Methods" [ref=e475] [cursor=pointer]:
+                  - /url: /services#research
+              - listitem [ref=e476]:
+                - link "Technical Writing" [ref=e477] [cursor=pointer]:
+                  - /url: /services#writing
+              - listitem [ref=e478]:
+                - link "Data Analysis" [ref=e479] [cursor=pointer]:
+                  - /url: /services#analysis
+          - generic [ref=e480]:
+            - heading "Legal" [level=3] [ref=e481]
+            - list [ref=e482]:
+              - listitem [ref=e483]:
+                - link "Terms of Service" [ref=e484] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=e485]:
+                - link "Privacy Policy" [ref=e486] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e487]:
+                - link "Conditions" [ref=e488] [cursor=pointer]:
+                  - /url: /conditions
+        - generic [ref=e489]:
+          - paragraph [ref=e490]: © 2026 KindLeah Investment and Projects Pty Ltd. All rights reserved.
+          - generic [ref=e491]:
+            - link [ref=e492] [cursor=pointer]:
+              - /url: https://facebook.com
+              - img [ref=e493]
+            - link [ref=e495] [cursor=pointer]:
+              - /url: https://twitter.com
+              - img [ref=e496]
+            - link [ref=e498] [cursor=pointer]:
+              - /url: https://linkedin.com
+              - img [ref=e499]
+            - link [ref=e501] [cursor=pointer]:
+              - /url: https://instagram.com
+              - img [ref=e502]
+  - region "Notifications (F8)":
+    - list
