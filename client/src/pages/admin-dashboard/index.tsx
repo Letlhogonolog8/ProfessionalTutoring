@@ -7,7 +7,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import {
   Dialog, DialogContent, DialogDescription, DialogFooter,
   DialogHeader, DialogTitle,
@@ -19,6 +18,7 @@ import { apiRequest } from "@/lib/queryClient";
 import {
   Users, BookOpen, CalendarCheck, TrendingUp,
   Plus, Trash2, Phone, Mail, ChevronRight, UserCog,
+  Edit2, MessageSquare,
 } from "lucide-react";
 import { format } from "date-fns";
 import { Link } from "wouter";
@@ -29,8 +29,12 @@ export default function AdminDashboard() {
 
   const [showAddTutor, setShowAddTutor] = useState(false);
   const [deleteTutor, setDeleteTutor] = useState<User | null>(null);
+  const [editTutor, setEditTutor] = useState<User | null>(null);
   const [newTutor, setNewTutor] = useState({
     username: "", email: "", fullName: "", password: "", phoneNumber: "", bio: "",
+  });
+  const [editForm, setEditForm] = useState({
+    fullName: "", email: "", phoneNumber: "", bio: "",
   });
 
   const { data: tutors = [] } = useQuery<User[]>({ queryKey: ["/api/users?role=tutor"] });
@@ -58,6 +62,21 @@ export default function AdminDashboard() {
     },
   });
 
+  const editTutorMutation = useMutation({
+    mutationFn: async ({ id, data }: { id: number; data: typeof editForm }) => {
+      const res = await apiRequest("PUT", `/api/users/${id}`, data);
+      return res.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/users?role=tutor"] });
+      toast({ title: "Tutor updated", description: "Tutor profile updated successfully." });
+      setEditTutor(null);
+    },
+    onError: (err: Error) => {
+      toast({ title: "Update failed", description: err.message, variant: "destructive" });
+    },
+  });
+
   const deleteTutorMutation = useMutation({
     mutationFn: async (id: number) => {
       await apiRequest("DELETE", `/api/users/${id}`);
@@ -81,6 +100,16 @@ export default function AdminDashboard() {
     addTutorMutation.mutate({ ...newTutor, role: "tutor" });
   };
 
+  const openEditTutor = (tutor: User) => {
+    setEditTutor(tutor);
+    setEditForm({
+      fullName: tutor.fullName,
+      email: tutor.email,
+      phoneNumber: tutor.phoneNumber ?? "",
+      bio: tutor.bio ?? "",
+    });
+  };
+
   const getInitials = (name: string) =>
     name.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2);
 
@@ -101,6 +130,13 @@ export default function AdminDashboard() {
       title: "Completed Sessions", value: completedSessions.length, icon: <TrendingUp className="h-5 w-5" />,
       sub: "All time", color: "text-orange-500", bg: "bg-orange-500/10",
     },
+  ];
+
+  const quickLinks = [
+    { label: "Students", href: "/admin/students", icon: <Users className="h-4 w-4" /> },
+    { label: "Schedule", href: "/admin/schedule", icon: <CalendarCheck className="h-4 w-4" /> },
+    { label: "Messages", href: "/admin/chat", icon: <MessageSquare className="h-4 w-4" /> },
+    { label: "Documents", href: "/admin/documents", icon: <BookOpen className="h-4 w-4" /> },
   ];
 
   return (
@@ -138,12 +174,8 @@ export default function AdminDashboard() {
         </div>
 
         {/* Quick links */}
-        <div className="grid gap-4 sm:grid-cols-3">
-          {[
-            { label: "View All Students", href: "/admin/students", icon: <Users className="h-4 w-4" /> },
-            { label: "Session Schedule", href: "/admin/schedule", icon: <CalendarCheck className="h-4 w-4" /> },
-            { label: "Documents", href: "/admin/documents", icon: <BookOpen className="h-4 w-4" /> },
-          ].map(l => (
+        <div className="grid gap-4 sm:grid-cols-4">
+          {quickLinks.map(l => (
             <Link key={l.href} href={l.href}>
               <Card className="hover:shadow-md transition-shadow cursor-pointer hover:border-primary/40">
                 <CardContent className="p-4 flex items-center justify-between">
@@ -198,50 +230,84 @@ export default function AdminDashboard() {
 
         {/* Tutors list */}
         <Card>
-          <CardHeader>
-            <CardTitle>Tutors</CardTitle>
-            <CardDescription>All registered tutors on the platform</CardDescription>
+          <CardHeader className="flex flex-row items-center justify-between">
+            <div>
+              <CardTitle>Tutors</CardTitle>
+              <CardDescription>All registered tutors on the platform</CardDescription>
+            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              className="gap-2"
+              onClick={() => setShowAddTutor(true)}
+            >
+              <Plus className="h-4 w-4" /> Add Tutor
+            </Button>
           </CardHeader>
           <CardContent>
             {tutors.length === 0 ? (
-              <p className="text-center text-muted-foreground py-6">No tutors yet</p>
+              <div className="text-center py-10">
+                <UserCog className="h-10 w-10 text-muted-foreground mx-auto mb-3" />
+                <p className="text-muted-foreground">No tutors registered yet</p>
+                <Button className="mt-4 gap-2" onClick={() => setShowAddTutor(true)}>
+                  <Plus className="h-4 w-4" /> Add First Tutor
+                </Button>
+              </div>
             ) : (
               <div className="space-y-3">
-                {tutors.map(tutor => (
-                  <div key={tutor.id} className="flex items-center justify-between p-4 border rounded-lg">
-                    <div className="flex items-center gap-3">
-                      <Avatar className="h-10 w-10">
-                        <AvatarFallback className="bg-purple-500/10 text-purple-600 text-sm font-semibold">
-                          {getInitials(tutor.fullName)}
-                        </AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <p className="font-medium text-sm">{tutor.fullName}</p>
-                        <div className="flex items-center gap-3 mt-0.5">
-                          <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                            <Mail className="h-3 w-3" />{tutor.email}
-                          </span>
-                          {tutor.phoneNumber && (
+                {tutors.map(tutor => {
+                  const sessionCount = sessions.filter(s => s.tutorId === tutor.id).length;
+                  return (
+                    <div key={tutor.id} className="flex items-center justify-between p-4 border rounded-lg hover:bg-muted/30 transition-colors">
+                      <div className="flex items-center gap-3 min-w-0 flex-1">
+                        <Avatar className="h-10 w-10 flex-shrink-0">
+                          <AvatarFallback className="bg-purple-500/10 text-purple-600 text-sm font-semibold">
+                            {getInitials(tutor.fullName)}
+                          </AvatarFallback>
+                        </Avatar>
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-2">
+                            <p className="font-medium text-sm">{tutor.fullName}</p>
+                            <Badge variant="outline" className="text-[10px] px-1.5 py-0 text-purple-600 border-purple-200 bg-purple-500/10">
+                              {sessionCount} session{sessionCount !== 1 ? "s" : ""}
+                            </Badge>
+                          </div>
+                          <div className="flex items-center gap-3 mt-0.5">
                             <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                              <Phone className="h-3 w-3" />{tutor.phoneNumber}
+                              <Mail className="h-3 w-3" />{tutor.email}
                             </span>
+                            {tutor.phoneNumber && (
+                              <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                                <Phone className="h-3 w-3" />{tutor.phoneNumber}
+                              </span>
+                            )}
+                          </div>
+                          {tutor.bio && (
+                            <p className="text-xs text-muted-foreground mt-1 max-w-md truncate">{tutor.bio}</p>
                           )}
                         </div>
-                        {tutor.bio && (
-                          <p className="text-xs text-muted-foreground mt-1 max-w-md truncate">{tutor.bio}</p>
-                        )}
+                      </div>
+                      <div className="flex items-center gap-1 flex-shrink-0">
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-8 w-8 text-muted-foreground hover:text-foreground"
+                          onClick={() => openEditTutor(tutor)}
+                        >
+                          <Edit2 className="h-4 w-4" />
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-8 w-8 text-destructive hover:text-destructive hover:bg-destructive/10"
+                          onClick={() => setDeleteTutor(tutor)}
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
                       </div>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="text-destructive hover:text-destructive hover:bg-destructive/10"
-                      onClick={() => setDeleteTutor(tutor)}
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             )}
           </CardContent>
@@ -301,6 +367,48 @@ export default function AdminDashboard() {
               </Button>
             </DialogFooter>
           </form>
+        </DialogContent>
+      </Dialog>
+
+      {/* Edit Tutor Dialog */}
+      <Dialog open={!!editTutor} onOpenChange={() => setEditTutor(null)}>
+        <DialogContent className="sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle>Edit Tutor</DialogTitle>
+            <DialogDescription>Update profile information for {editTutor?.fullName}.</DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 py-2">
+            <div className="space-y-1">
+              <Label>Full Name</Label>
+              <Input value={editForm.fullName}
+                onChange={e => setEditForm({ ...editForm, fullName: e.target.value })} />
+            </div>
+            <div className="space-y-1">
+              <Label>Email</Label>
+              <Input type="email" value={editForm.email}
+                onChange={e => setEditForm({ ...editForm, email: e.target.value })} />
+            </div>
+            <div className="space-y-1">
+              <Label>Phone Number</Label>
+              <Input type="tel" placeholder="+27 71 234 5678" value={editForm.phoneNumber}
+                onChange={e => setEditForm({ ...editForm, phoneNumber: e.target.value })} />
+            </div>
+            <div className="space-y-1">
+              <Label>Bio</Label>
+              <Textarea rows={3} value={editForm.bio}
+                onChange={e => setEditForm({ ...editForm, bio: e.target.value })} />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setEditTutor(null)}>Cancel</Button>
+            <Button
+              disabled={editTutorMutation.isPending}
+              onClick={() => editTutor && editTutorMutation.mutate({ id: editTutor.id, data: editForm })}
+              className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90"
+            >
+              {editTutorMutation.isPending ? "Saving..." : "Save Changes"}
+            </Button>
+          </DialogFooter>
         </DialogContent>
       </Dialog>
 
