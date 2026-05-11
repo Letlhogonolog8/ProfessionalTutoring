@@ -1,6 +1,6 @@
 
 import { config as loadEnv } from "dotenv";
-loadEnv({ override: true });
+loadEnv();
 
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
