@@ -1,9 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { FaGraduationCap, FaAward, FaBook, FaPhone } from "react-icons/fa";
-import { User } from "@shared/schema";
-import tutorImage from "@assets/image_1744141820357.png";
 import { motion } from "framer-motion";
 
 interface TutorProfileProps {
@@ -12,18 +11,22 @@ interface TutorProfileProps {
 }
 
 export function TutorProfile({ expanded = false, onBookSession }: TutorProfileProps) {
-  // Samuel's profile is hardcoded as he's the only tutor
   const tutor = {
-    id: 1,
     fullName: "Samuel Silabele",
-    role: "tutor",
+    initials: "SS",
+    title: "Lead Tutor",
     bio: "Samuel is a highly respected academic with extensive experience in research methodology. His expertise spans quantitative, qualitative, and mixed methods research approaches. Students appreciate his patient teaching style and ability to explain complex concepts in accessible ways.",
     phoneNumber: "0734801665",
     qualifications: [
-      "PhD in Research Methodology",
-      "10+ years of tutoring experience",
-      "Published researcher with multiple academic papers"
-    ]
+      { icon: <FaGraduationCap className="h-4 w-4" />, text: "PhD in Research Methodology" },
+      { icon: <FaAward className="h-4 w-4" />, text: "10+ years of tutoring experience" },
+      { icon: <FaBook className="h-4 w-4" />, text: "Published researcher with multiple academic papers" },
+      { icon: <FaPhone className="h-4 w-4" />, text: "Contact: 0734801665" },
+    ],
+    specialisations: [
+      "Quantitative Research", "Qualitative Research", "Mixed Methods",
+      "Academic Writing", "Statistical Analysis", "Research Design",
+    ],
   };
 
   return (
@@ -31,86 +34,88 @@ export function TutorProfile({ expanded = false, onBookSession }: TutorProfilePr
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="hover-up"
     >
       <Card className={`overflow-hidden shadow-lg ${expanded ? "w-full" : "max-w-3xl mx-auto"}`}>
-        <div className={expanded ? "md:flex" : ""}>
-          <div className={`relative ${expanded ? "md:flex-shrink-0 md:w-1/3" : ""}`}>
-            <img
-              src={tutorImage}
-              alt={tutor.fullName}
-              className={`w-full object-cover object-top ${!expanded && "max-h-[320px]"} z-10 relative rounded-lg`}
-            />
+        {/* Header banner */}
+        <div className="h-24 bg-gradient-to-r from-purple-600 to-blue-500 relative">
+          <div className="absolute -bottom-10 left-8">
+            <div className="h-20 w-20 rounded-full bg-background border-4 border-background flex items-center justify-center shadow-lg">
+              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+                {tutor.initials}
+              </span>
+            </div>
           </div>
-          <CardContent className={`p-6 md:p-8 ${expanded ? "md:w-2/3" : ""}`}>
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="flex items-center"
-            >
+        </div>
+
+        <CardContent className="pt-14 p-6 md:p-8">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
+          >
+            {/* Name + badge */}
+            <div className="flex items-center gap-3 flex-wrap">
               <h3 className="text-2xl font-bold">{tutor.fullName}</h3>
-              <div className="ml-4 bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
-                <span className="text-sm font-medium text-primary">Lead Tutor</span>
-              </div>
-            </motion.div>
+              <Badge className="bg-gradient-to-r from-purple-600 to-blue-500 text-white border-0">
+                {tutor.title}
+              </Badge>
+            </div>
 
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              className="mt-4 text-muted-foreground"
-            >
+            {/* Bio */}
+            <p className="mt-3 text-muted-foreground leading-relaxed">
               {tutor.bio}
-            </motion.p>
+            </p>
 
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="mt-6 space-y-4"
-            >
-              <div className="flex items-start">
-                <FaGraduationCap className="h-5 w-5 text-primary mt-0.5 mr-3" />
-                <span>{tutor.qualifications[0]}</span>
-              </div>
-              <div className="flex items-start">
-                <FaAward className="h-5 w-5 text-primary mt-0.5 mr-3" />
-                <span>{tutor.qualifications[1]}</span>
-              </div>
-              <div className="flex items-start">
-                <FaBook className="h-5 w-5 text-primary mt-0.5 mr-3" />
-                <span>{tutor.qualifications[2]}</span>
-              </div>
-              <div className="flex items-start">
-                <FaPhone className="h-5 w-5 text-primary mt-0.5 mr-3" />
-                <span>Contact: {tutor.phoneNumber}</span>
-              </div>
-            </motion.div>
+            {/* Qualifications */}
+            <div className="mt-6 space-y-3">
+              {tutor.qualifications.map((q, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 + i * 0.08, duration: 0.3 }}
+                  className="flex items-center gap-3"
+                >
+                  <span className="text-primary flex-shrink-0">{q.icon}</span>
+                  <span className="text-sm">{q.text}</span>
+                </motion.div>
+              ))}
+            </div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="mt-6"
-            >
+            {/* Specialisations */}
+            <div className="mt-6">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                Areas of Expertise
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {tutor.specialisations.map(s => (
+                  <span
+                    key={s}
+                    className="text-xs px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-8">
               {onBookSession ? (
-                <Button 
-                  onClick={onBookSession} 
-                  className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90 text-white animate-pulse-glow"
+                <Button
+                  onClick={onBookSession}
+                  className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90 text-white"
                 >
                   Book a Session
                 </Button>
               ) : (
-                <Button asChild className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90 text-white animate-pulse-glow">
-                  <Link href="/student/book-session">
-                    Book a Session
-                  </Link>
+                <Button asChild className="bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-90 text-white">
+                  <Link href="/student/book-session">Book a Session</Link>
                 </Button>
               )}
-            </motion.div>
-          </CardContent>
-        </div>
+            </div>
+          </motion.div>
+        </CardContent>
       </Card>
     </motion.div>
   );
