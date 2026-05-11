@@ -18,7 +18,7 @@ import { apiRequest } from "@/lib/queryClient";
 import {
   Users, BookOpen, CalendarCheck, TrendingUp,
   Plus, Trash2, Phone, Mail, ChevronRight, UserCog,
-  Edit2, MessageSquare,
+  Edit2,
 } from "lucide-react";
 import { format } from "date-fns";
 import { Link } from "wouter";
@@ -135,7 +135,6 @@ export default function AdminDashboard() {
   const quickLinks = [
     { label: "Students", href: "/admin/students", icon: <Users className="h-4 w-4" /> },
     { label: "Schedule", href: "/admin/schedule", icon: <CalendarCheck className="h-4 w-4" /> },
-    { label: "Messages", href: "/admin/chat", icon: <MessageSquare className="h-4 w-4" /> },
     { label: "Documents", href: "/admin/documents", icon: <BookOpen className="h-4 w-4" /> },
   ];
 
@@ -174,7 +173,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* Quick links */}
-        <div className="grid gap-4 sm:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-3">
           {quickLinks.map(l => (
             <Link key={l.href} href={l.href}>
               <Card className="hover:shadow-md transition-shadow cursor-pointer hover:border-primary/40">

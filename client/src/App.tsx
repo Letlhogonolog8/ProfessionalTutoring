@@ -14,7 +14,6 @@ import ServicesPage from "@/pages/services-page";
 import AdminDashboard from "@/pages/admin-dashboard/index";
 import AdminSchedule from "@/pages/admin-dashboard/schedule";
 import AdminStudents from "@/pages/admin-dashboard/students";
-import AdminChat from "@/pages/admin-dashboard/chat";
 import AdminDocuments from "@/pages/admin-dashboard/documents";
 import ContactPage from "@/pages/contact-page";
 import AuthPage from "@/pages/auth-page";
@@ -132,9 +131,6 @@ function Router() {
       </Route>
       <Route path="/admin/students">
         <ProtectedRoute path="/admin/students" component={AdminStudents} role="admin" />
-      </Route>
-      <Route path="/admin/chat">
-        <ProtectedRoute path="/admin/chat" component={AdminChat} role="admin" />
       </Route>
       <Route path="/admin/documents">
         <ProtectedRoute path="/admin/documents" component={AdminDocuments} role="admin" />

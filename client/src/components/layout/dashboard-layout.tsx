@@ -57,11 +57,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       icon: <Users className="h-5 w-5 mr-3" />
     },
     {
-      name: "Chat",
-      href: "/admin/chat",
-      icon: <MessageSquare className="h-5 w-5 mr-3" />
-    },
-    {
       name: "Documents",
       href: "/admin/documents",
       icon: <FileText className="h-5 w-5 mr-3" />
