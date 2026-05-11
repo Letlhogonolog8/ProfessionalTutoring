@@ -80,7 +80,7 @@ app.use((req, res, next) => {
   }
 
   const port = Number(process.env.PORT) || 5000;
-  const host = "localhost";
+  const host = "0.0.0.0";
 
   const startServer = async () => {
     try {
