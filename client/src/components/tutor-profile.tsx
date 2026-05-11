@@ -39,7 +39,7 @@ export function TutorProfile({ expanded = false, onBookSession }: TutorProfilePr
             <img
               src={tutorImage}
               alt={tutor.fullName}
-              className={`w-full h-full object-cover ${!expanded && "max-h-[300px]"} z-10 relative rounded-lg`}
+              className={`w-full object-cover object-top ${!expanded && "max-h-[320px]"} z-10 relative rounded-lg`}
             />
           </div>
           <CardContent className={`p-6 md:p-8 ${expanded ? "md:w-2/3" : ""}`}>
